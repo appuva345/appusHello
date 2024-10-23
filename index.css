@@ -1,0 +1,240 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'League Gothic', sans-serif; 
+    box-sizing: border-box;
+    background-color: #000; 
+    color: #fff; 
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 30px 20px 0px 0px ;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 50px;
+}
+
+.logo img {
+    width: 180px; /* Adjusted for responsiveness */
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: #fff;
+    z-index: 1000;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav ul li {
+    margin-right: 20px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    font-size: 12px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav ul li a:hover {
+    border-bottom: 2px solid #fff;
+}
+
+.nav .left-corner ul {
+    display: flex;
+}
+
+.nav .left-corner ul li {
+    margin-left: 20px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Page Sections */
+.page, .page1, .page2, .page3, .page4, .page5 {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    position: relative;
+}
+
+.page { background-image: url('https://res.cloudinary.com/dcmknkjtk/image/upload/v1728836905/space0_lzgnwf.jpg'); }
+.page1 { background-image: url('https://res.cloudinary.com/dcmknkjtk/image/upload/v1728836905/space1_k9a7l5.jpg'); }
+.page2 { background-image: url('https://res.cloudinary.com/dcmknkjtk/image/upload/v1728836905/space2_go5cpq.jpg'); }
+.page3 { background-image: url('https://res.cloudinary.com/dcmknkjtk/image/upload/v1728836905/space3_kcvyl6.jpg'); }
+.page4 { background-image: url('https://res.cloudinary.com/dcmknkjtk/image/upload/v1728836905/space4_okxlxp.jpg'); }
+.page5 { background-image: url('https://res.cloudinary.com/dcmknkjtk/image/upload/v1728836905/space5_uyvmdl.jpg'); }
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+}
+
+.page-content {
+    position: relative;
+    text-align: left;
+    z-index: 2;
+}
+
+.page h2, .page1 h2, .page2 h2, .page3 h2, .page4 h1, .page5 h1 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-left: 80px;
+    letter-spacing: 0.1rem;
+    color: #fff;
+    position: relative;
+    top: 150px;
+}
+
+.page h1, .page1 h1, .page2 h1, .page3 h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #fff;
+    letter-spacing: 0.1rem;
+    margin-left: 80px;
+    position: relative;
+    top: 110px;
+}
+
+.cta-button {
+    padding: 15px 40px;
+    margin-left: 80px;
+    background-color: transparent;
+    border: 1.5px solid #fff;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    position: relative;
+    top: 120px;
+}
+
+.cta-button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Footer */
+.footer {
+    background-color: #000;
+    height: 100px;
+    color: #ded1d2;
+    text-align: center;
+    font-size: 11.5px;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .spp {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 20px;
+    letter-spacing: 0.2px;
+    color: #fff;
+}
+
+.footer .sp {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 20px;
+    letter-spacing: 0.2px;
+    color: #e7d9d9;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .logo img {
+        width: 140px; /* Adjust logo size for mobile */
+    }
+    
+    .nav ul li {
+        margin-right: 15px; /* Adjust margin between nav items */
+        font-size: 10px; /* Reduce font size */
+    }
+    
+    .nav ul li a {
+        padding-bottom: 3px; /* Reduce padding */
+        font-size: 10px; /* Adjust link font size */
+    }
+    
+    .cta-button {
+        padding: 10px 20px; /* Reduce button padding */
+        font-size: 0.8rem; /* Reduce button font size */
+    }
+    
+    .page h1, .page1 h1, .page2 h1, .page3 h1 {
+        font-size: 2.5rem; /* Adjust heading size */
+        margin-left: 30px;
+        top: 80px;
+    }
+    
+    .page h2, .page1 h2, .page2 h2, .page3 h2 {
+        font-size: 1rem; /* Adjust subheading size */
+        margin-left: 30px;
+        top: 100px;
+    }
+
+    .page-content {
+        text-align: center; /* Center align text for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cta-button {
+        padding: 8px 15px; /* Further reduce button padding */
+        font-size: 0.7rem;
+    }
+    
+    .page h1, .page1 h1, .page2 h1, .page3 h1 {
+        font-size: 1.8rem; /* Adjust heading for very small screens */
+        margin-left: 20px;
+        top: 60px;
+    }
+
+    .page h2, .page1 h2, .page2 h2, .page3 h2 {
+        font-size: 0.9rem;
+        margin-left: 20px;
+        top: 80px;
+    }
+    
+    .footer {
+        font-size: 10px;
+    }
+}
